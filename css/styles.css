@@ -113,6 +113,10 @@ button:hover {
   background-color: rgba(155, 163, 0, 0.8);
 }
 
+p {
+  color: white;
+}
+
 h1 {
   font-size: 16px;
   color: #ddd;
@@ -130,6 +134,10 @@ h1 {
   background: rgb(0, 0, 0, 0.3);
   padding: 10px 15px;
   border-radius: 10px;
+}
+
+h2 {
+  color: white;
 }
 
 .current {
@@ -191,11 +199,27 @@ browse.html
   /* border: 1px solid white; */
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   width: 100%;
   padding: 20px 0px 20px 0px;
   background-color: rgb(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
   border-radius: 10px;
+}
+
+.alljackets li {
+}
+
+.alljackets li div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.alljackets img {
+  width: 150px;
 }
 
 .text-jackets {
@@ -224,6 +248,7 @@ browse.html
     flex-direction: column;
     width: 20%;
     padding: 30px 100px;
+    justify-content: space-evenly;
   }
 
   .jacket-block {

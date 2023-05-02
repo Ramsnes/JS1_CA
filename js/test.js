@@ -30,7 +30,8 @@ async function renderHTML() {
   // create .forEach to produce dynamic innerHTML as a function
   productList.forEach(function (element, index) {
     //search the API document for what the element names are to put in to the dynamic innerHTML underneath
-    listContainer.innerHTML = +`
+
+    listContainer.innerHTML += `
     <li>
           <div>
             <h2>${element.title}</h2>
@@ -44,5 +45,3 @@ async function renderHTML() {
 }
 
 renderHTML();
-
-// DOM manipulation
