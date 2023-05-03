@@ -45,10 +45,6 @@ main {
   flex: 1;
 }
 
-.biglogodiv {
-  /* border: 3px solid white; */
-}
-
 .logobigwhite {
   width: 20%;
   margin-left: auto;
@@ -199,7 +195,7 @@ browse.html
   /* border: 1px solid white; */
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
   padding: 20px 0px 20px 0px;
