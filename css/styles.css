@@ -140,6 +140,10 @@ h2 {
   text-decoration: underline;
 }
 
+.whatever {
+  display: none;
+}
+
 /*--
 index.html
 --*/

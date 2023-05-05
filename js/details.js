@@ -1,6 +1,6 @@
 const baseUrl = "https://api.noroff.dev/api/v1";
 
-function getUrl() {
+function getProductId() {
   // given this url: localhost:3000/details.html?id=MY_ID
 
   // Get the search params from the URL
@@ -21,11 +21,25 @@ async function fetchProduct(id) {
 }
 
 async function renderHTML() {
-  const id = getUrl();
+  const id = getProductId();
 
+  // try catch starts here
   const product = await fetchProduct(id);
+  const whatever = document.getElementById("mainJacketWrapper");
+  whatever.removeAttribute("class");
+  const loading = document.getElementById("loading");
+  loading.remove();
+
+  const description = document.getElementById("description");
+  description.innerHTML = product.description;
+  const image = document.getElementById("jacketImg");
+  image.src = product.image;
+  const jacketPrice = document.getElementById("jacketPrice");
+  jacketPrice.innerHTML = product.price;
 
   console.log(product);
+
+  // catch here I think
 }
 
 renderHTML();
