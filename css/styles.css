@@ -157,10 +157,9 @@ h2 {
   margin-top: auto;
   color: white;
   font-size: 2em;
-  border-color: 1px solid black;
   /**/
   align-items: center;
-  height: 100%;
+  height: 70%;
 }
 #loading p {
   margin: 0;
