@@ -17,20 +17,20 @@ async function fetchProduct(id) {
   // needs to be async since we can't wait for result before code moves on
   const response = await fetch(baseUrl + `/rainy-days/${id}`);
   const data = await response.json();
-
   return data;
 }
 
 async function renderHTML() {
   try {
     const id = getProductId();
-
-    // try catch starts here
     const product = await fetchProduct(id);
     const whatever = document.getElementById("mainJacketWrapper");
     whatever.removeAttribute("class");
     const loading = document.getElementById("loading");
     loading.remove();
+
+    // title change dynamically
+    document.title = `Rainy Days - ${product.title}`;
 
     const description = document.getElementById("description");
     description.innerHTML = product.description;
@@ -38,6 +38,8 @@ async function renderHTML() {
     image.src = product.image;
     const jacketPrice = document.getElementById("jacketPrice");
     jacketPrice.innerHTML = product.price;
+    const header = document.getElementById("header");
+    header.innerHTML = product.title;
 
     console.log(product);
   } catch (error) {
@@ -45,7 +47,7 @@ async function renderHTML() {
         `;
     console.log("Please check details.js code for fixing");
   } finally {
-    console.log("Inevitable message");
+    console.log("try catch error has been handled");
   }
 }
 
