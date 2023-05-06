@@ -44,13 +44,13 @@ async function renderHTML() {
     const header = document.getElementById("header");
     header.innerHTML = product.title;
 
-    console.log(product);
+    // console.log(product);
   } catch (error) {
     errorMsg.innerHTML = `<div class ="error"> There was an error. Contact online support at 555-444-333.<div>
         `;
-    console.log("Please check details.js code for fixing");
+    // console.log("Please check details.js code for fixing");
   } finally {
-    console.log("try catch error has been handled");
+    // console.log("try catch error has been handled");
   }
 }
 

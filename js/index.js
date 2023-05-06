@@ -17,7 +17,7 @@ async function fetchData() {
   // needs to be async since we can't wait for result before code moves on
   const response = await fetch(baseUrl + allEndpoint);
   const data = await response.json();
-  console.log({ data }); // shows element ID's of API
+  // console.log({ data }); // shows element ID's of API
   return data;
 }
 
@@ -42,7 +42,7 @@ async function renderHTML() {
     productElement.innerHTML = productContent;
 
     productElement.addEventListener("click", function () {
-      console.log("On click", element.id);
+      // console.log("On click", element.id);
       window.location.href = `details.html?id=${element.id}`;
     });
 
