@@ -4,65 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="This is a clothing store" />
+    <meta name="description" content="Collection of jackets" />
     <link href="/css/styles.css" rel="stylesheet" />
-    <title>Rainydays | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rainydays | Collection</title>
   </head>
 
   <body>
     <header>
       <div class="wrapper">
         <div>
-          <a class="current" href="/index.html">Home</a>
+          <a href="/index.html">Home</a>
         </div>
-        <div>
-          <a href="/browse.html">Browse collection</a>
-        </div>
-      </div>
-      <div>
-        <a href="/cart.html"
-          ><img class="cart" src="/images/cart.png" alt="cart icon" />
-        </a>
+        <!-- <div>
+          <a class="current" href="/browse.html">Browse collection</a>
+        </div> -->
       </div>
     </header>
 
+    <div class="biglogodiv">
+      <a href="/index.html"
+        ><img
+          src="/images/RainyDays_Logo-white.png"
+          alt="White logo of Rainydays"
+          class="logobigwhite"
+      /></a>
+    </div>
+
     <main>
-      <div class="biglogodiv">
-        <a href="/index.html"
-          ><img
-            src="/images/RainyDays_Logo-white.png"
-            alt="White logo of Rainydays"
-            class="logobigwhite"
-        /></a>
+      <div class="text-jackets">
+        <div class="h1class">
+          <h1><span>Select your jacket for a description</span></h1>
+        </div>
+        <p></p>
       </div>
-      <div class="h1class">
-        <h1><span>Begin your journey</span></h1>
-      </div>
-      <div class="threepics">
-        <div class="pics">
-          <a href="/browse.html">
-            <img
-              src="/images/anytraveltips.jpeg"
-              alt="A man standing on a cliff with a jacket"
-            />
-          </a>
-        </div>
-        <div class="pics">
-          <a href="/browse.html">
-            <img
-              src="/images/rei1.jpeg"
-              alt="A woman wearing a red jacket in the forest"
-            />
-          </a>
-        </div>
-        <div class="pics">
-          <a href="/browse.html">
-            <img
-              src="/images/Activeforlife.jpeg"
-              alt="A child shouting in the rain in a yellow jacket"
-            />
-          </a>
-        </div>
+      <div class="jacket-block">
+        <ul class="alljackets"></ul>
       </div>
     </main>
 
@@ -81,5 +63,6 @@
       </div>
     </footer>
     <div class="copyright">Copyright Rainydays LLC &copy;</div>
+    <script src="js/index.js"></script>
   </body>
 </html>

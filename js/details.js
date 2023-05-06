@@ -34,10 +34,13 @@ async function renderHTML() {
 
     const description = document.getElementById("description");
     description.innerHTML = product.description;
+
     const image = document.getElementById("jacketImg");
     image.src = product.image;
+
     const jacketPrice = document.getElementById("jacketPrice");
-    jacketPrice.innerHTML = product.price;
+    jacketPrice.innerHTML = "Price: " + product.price;
+
     const header = document.getElementById("header");
     header.innerHTML = product.title;
 
