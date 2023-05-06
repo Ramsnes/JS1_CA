@@ -10,7 +10,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #0a3641;
+  /* background-color: #0a3641; */
+  background-color: #000;
 }
 
 body {
@@ -149,6 +150,7 @@ h2 {
   border-color: red;
   background: rgba(255, 0, 0, 0.1);
   margin-top: 250px;
+  font-size: 0.6em;
 }
 
 #loading {
