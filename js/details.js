@@ -1,4 +1,5 @@
 const baseUrl = "https://api.noroff.dev/api/v1";
+const errorMsg = document.querySelector(".loadingClass");
 
 function getProductId() {
   // given this url: localhost:3000/details.html?id=MY_ID
@@ -21,25 +22,31 @@ async function fetchProduct(id) {
 }
 
 async function renderHTML() {
-  const id = getProductId();
+  try {
+    const id = getProductId();
 
-  // try catch starts here
-  const product = await fetchProduct(id);
-  const whatever = document.getElementById("mainJacketWrapper");
-  whatever.removeAttribute("class");
-  const loading = document.getElementById("loading");
-  loading.remove();
+    // try catch starts here
+    const product = await fetchProduct(id);
+    const whatever = document.getElementById("mainJacketWrapper");
+    whatever.removeAttribute("class");
+    const loading = document.getElementById("loading");
+    loading.remove();
 
-  const description = document.getElementById("description");
-  description.innerHTML = product.description;
-  const image = document.getElementById("jacketImg");
-  image.src = product.image;
-  const jacketPrice = document.getElementById("jacketPrice");
-  jacketPrice.innerHTML = product.price;
+    const description = document.getElementById("description");
+    description.innerHTML = product.description;
+    const image = document.getElementById("jacketImg");
+    image.src = product.image;
+    const jacketPrice = document.getElementById("jacketPrice");
+    jacketPrice.innerHTML = product.price;
 
-  console.log(product);
-
-  // catch here I think
+    console.log(product);
+  } catch (error) {
+    errorMsg.innerHTML = `<div class ="error"> There was an error. Contact online support at 555-444-333.<div>
+        `;
+    console.log("Please check details.js code for fixing");
+  } finally {
+    console.log("Inevitable message");
+  }
 }
 
 renderHTML();
